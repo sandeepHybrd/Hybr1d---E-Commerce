@@ -26,7 +26,7 @@ API_SECRET=This_is_very_secret_string // this is required for the jsontoken sign
 
 - [_Postman APIs Collection_](./api_collection/Hybr1d.postman_collection.json)
 
-- ![ALL API](./apis_imgs/api_folder.png)
+- ![ALL API](./apis_imgs/api_folder.jpg)
 
 * While Making each Request You have pass the `token` in header, except the _auth_ APIs.
 * **{{host}}**: `http://localhost:{{your_port}}`
