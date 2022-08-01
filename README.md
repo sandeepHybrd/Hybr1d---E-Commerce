@@ -38,7 +38,7 @@ Authorization: JWT {token}
 ### @POST _{{host}}/auth/register_
 
 - **Sample CURL Request**
-  ```json
+  ```
     curl --location --request POST 'http://localhost:3001/api/auth/register' \
     --header 'Content-Type: application/json' \
     --data-raw '{
@@ -58,7 +58,7 @@ Authorization: JWT {token}
 
 - **Sample CURL Request**
 
-  ```json
+  ```
       curl --location --request POST 'http://localhost:3001/api/auth/login' \
       --header 'Content-Type: application/json' \
       --data-raw '{
@@ -83,7 +83,7 @@ Authorization: JWT {token}
 
 - **Sample CURL Request**
 
-  ```json
+  ```
       curl --location --request GET 'http://localhost:3001/api/buyer/list-of-sellers' \
       --header 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU5MzM3MDA0LCJleHAiOjE2NTk1MDk4MDR9.1EX5oPiLn8saOnY1TTl_xPnDlR_wl4tJSwzLEO4xTw4'
   ```
@@ -108,7 +108,7 @@ Authorization: JWT {token}
 
 - **Sample CURL Request**
 
-  ```json
+  ```
       curl --location --request GET 'http://localhost:3001/api/buyer/seller-catalog/3' \
       --header 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU5MzM3MDA0LCJleHAiOjE2NTk1MDk4MDR9.1EX5oPiLn8saOnY1TTl_xPnDlR_wl4tJSwzLEO4xTw4'
   ```
@@ -142,7 +142,7 @@ Authorization: JWT {token}
 
 - **Sample CURL Request**
 
-  ```json
+  ```
       curl --location --request POST 'http://localhost:3001/api/buyer/create-order/3' \
       --header 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU5MzM3MDA0LCJleHAiOjE2NTk1MDk4MDR9.1EX5oPiLn8saOnY1TTl_xPnDlR_wl4tJSwzLEO4xTw4' \
       --header 'Content-Type: application/json' \
@@ -184,7 +184,7 @@ Authorization: JWT {token}
 
 - **Sample CURL Request**
 
-  ```json
+  ```
       curl --location --request POST 'http://localhost:3001/api/seller/create-catalog' \
       --header 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjU5MzM2OTc2LCJleHAiOjE2NTk1MDk3NzZ9.LZi7Iq4Dy8lfTcNZLLqpp5LEwPB98PoLc5c-2Z8qoWY' \
       --header 'Content-Type: application/json' \
@@ -230,7 +230,7 @@ Authorization: JWT {token}
 
 - **Sample CURL Request**
 
-  ```json
+  ```
       curl --location --request GET 'http://localhost:3001/api/seller/orders' \
       --header 'Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjU5MzM3MjMxLCJleHAiOjE2NTk1MTAwMzF9.9amMMM3Oqsyo5u45dzRY1dfi82Ie2oylXGENH67yxx4'
   ```
