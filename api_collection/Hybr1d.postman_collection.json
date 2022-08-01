@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "d7e964fe-a1c6-4578-9718-e9faf1b6d974",
+		"name": "Hybr1d",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/auth/ping",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"seller2\",\n    \"password\": \"password\",\n    \"type\": \"seller\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"username\": \"seller2\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buyers",
+			"item": [
+				{
+					"name": "get all Sellers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU5MzM3MDA0LCJleHAiOjE2NTk1MDk4MDR9.1EX5oPiLn8saOnY1TTl_xPnDlR_wl4tJSwzLEO4xTw4",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/buyer/list-of-sellers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buyer",
+								"list-of-sellers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get seller catalog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU5MzM3MDA0LCJleHAiOjE2NTk1MDk4MDR9.1EX5oPiLn8saOnY1TTl_xPnDlR_wl4tJSwzLEO4xTw4",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/buyer/seller-catalog/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buyer",
+								"seller-catalog",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Order",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU5MzM3MDA0LCJleHAiOjE2NTk1MDk4MDR9.1EX5oPiLn8saOnY1TTl_xPnDlR_wl4tJSwzLEO4xTw4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"products\": [\n       3,\n       4\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/buyer/create-order/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"buyer",
+								"create-order",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seller",
+			"item": [
+				{
+					"name": "Create Catalog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjU5MzM2OTc2LCJleHAiOjE2NTk1MDk3NzZ9.LZi7Iq4Dy8lfTcNZLLqpp5LEwPB98PoLc5c-2Z8qoWY",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"products\": [\n        {\n            \"name\": \"product2\",\n            \"price\": 30\n        },\n         {\n            \"name\": \"product3\",\n            \"price\": 40\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/seller/create-catalog",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"seller",
+								"create-catalog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjU5MzM3MjMxLCJleHAiOjE2NTk1MTAwMzF9.9amMMM3Oqsyo5u45dzRY1dfi82Ie2oylXGENH67yxx4",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/seller/orders",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"seller",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/ping",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -24,6 +24,8 @@ API_SECRET=This_is_very_secret_string // this is required for the jsontoken sign
 
 # API Endpoints
 
+- [_Postman APIs Collection_](./api_collection/Hybr1d.postman_collection.json)
+
 - ![ALL API](./apis_imgs/api_folder.png)
 
 * While Making each Request You have pass the `token` in header, except the _auth_ APIs.
