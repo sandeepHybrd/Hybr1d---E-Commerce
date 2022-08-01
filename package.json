@@ -1,0 +1,35 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "Backend Assigment",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Logan-47/Hybr1d---E-Commerce.git"
+  },
+  "author": "Ashish (Logan-47)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Logan-47/Hybr1d---E-Commerce/issues"
+  },
+  "homepage": "https://github.com/Logan-47/Hybr1d---E-Commerce#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "sequelize": "^6.21.3",
+    "sqlite3": "^5.0.11",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "type": "module"
+}
